@@ -61,7 +61,7 @@ public class Units {
 		this.x = x;
 		this.y = y;
 		this.name = name;
-		if (name.equals("MediumTank")) {
+		if (name.equals("MediumTank") || name.equals("MediumTankRed")) {
 			this.width = 75;
 			this.height = 75;
 			this.speed = 4;
@@ -76,7 +76,7 @@ public class Units {
 			this.bulletHeight = 20;
 			this.bulletSpeed = 10;
 		}
-		if (name.equals("Harvester")) {
+		if (name.equals("Harvester") || name.equals("HarvesterRed")) {
 			this.width = 75;
 			this.height = 65;
 			this.speed = 5;
@@ -92,7 +92,7 @@ public class Units {
 			this.bulletSpeed = 12;
 			this.miningRate = 10;
 		}
-		if (name.equals("Artillery")) {
+		if (name.equals("Artillery") || name.equals("ArtilleryRed")) {
 			this.width = 100;
 			this.height = 100;
 			this.speed = 3;
@@ -106,6 +106,36 @@ public class Units {
 			this.bulletWidth = 20;
 			this.bulletHeight = 24;
 			this.bulletSpeed = 8;
+		}
+		if (name.equals("Humvee") || name.equals("HumveeRed")) {
+			this.width = 70;
+			this.height = 70;
+			this.speed = 6;
+			this.range = 175;
+			this.damage = 10;
+			this.HP = 425;
+			this.trainingTime = 100;
+			this.directionX = "East";
+			this.directionY = "South";
+			this.attackCoolDown = 5;
+			this.bulletWidth = 6;
+			this.bulletHeight = 12;
+			this.bulletSpeed = 13;
+		}
+		if (name.equals("MammothTank") || name.equals("MammothTankRed")) {
+			this.width = 110;
+			this.height = 110;
+			this.speed = 4;
+			this.range = 225;
+			this.damage = 50;
+			this.HP = 1000;
+			this.trainingTime = 400;
+			this.directionX = "East";
+			this.directionY = "South";
+			this.attackCoolDown = 30;
+			this.bulletWidth = 18;
+			this.bulletHeight = 22;
+			this.bulletSpeed = 10;
 		}
 
 	}

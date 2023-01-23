@@ -294,7 +294,7 @@ public class DrawImages extends JPanel {
 			if (Play.resourceCount >= harvesterCost) {
 				System.out.println("harvester building");
 				DrawImages.buildings.elementAt(DrawImages.collisionIndex).addQueue(Buildings.mouseX, Buildings.mouseY,
-						"Harvester");
+						"MammothTank");
 				Play.resourceCount -= harvesterCost;
 			}
 			Button.clicked = " ";
