@@ -25,7 +25,7 @@ public class Computerplayer {
 		for (int i = 0; i < DrawImages.enemyBuildings.size(); i++) {
 			if (DrawImages.enemyBuildings.elementAt(i).name.equals("RefineryRed")) {
 				if (Play.resourceCountRed >= DrawImages.harvesterCost && Play.refineryBuilt == true
-						&& Play.harvesterCountRed <= 0) {
+						&& Play.harvesterCountRed <= 10) {
 					DrawImages.enemyBuildings.elementAt(i).addQueue(DrawImages.enemyBuildings.get(i).getX(),
 							DrawImages.enemyBuildings.get(i).getY(), "HarvesterRed");
 					Play.resourceCountRed -= DrawImages.harvesterCost;
@@ -142,7 +142,8 @@ public class Computerplayer {
 					}
 				}
 				// Moves to the closest enemy unit
-				if (DrawImages.enemyUnits.elementAt(i).name.equals("HarvesterRed") == false) {
+				if (DrawImages.enemyUnits.elementAt(i).name.equals("HarvesterRed") == false
+						&& DrawImages.enemyUnits.elementAt(i).attackEnemy == false) {
 					if (DrawImages.enemyUnits.elementAt(i).getX() - DrawImages.units.elementAt(indexLDTE).getX() < 300
 							|| DrawImages.units.elementAt(indexLDTE).getX()
 									- DrawImages.enemyUnits.elementAt(i).getX() < 300
@@ -165,7 +166,8 @@ public class Computerplayer {
 						|| DrawImages.enemyUnits.elementAt(i).name.equals("ArtilleryRed")
 						|| DrawImages.enemyUnits.elementAt(i).name.equals("MammothTankRed")
 						|| DrawImages.enemyUnits.elementAt(i).name.equals("HumveeRed")
-								&& DrawImages.enemyUnits.elementAt(i).moveToTarget == false) {
+								&& DrawImages.enemyUnits.elementAt(i).moveToTarget == false
+								&& DrawImages.enemyUnits.elementAt(i).attackEnemy == false) {
 					DrawImages.enemyUnits.elementAt(i).moveToX = DrawImages.buildings.elementAt(0).getX();
 					DrawImages.enemyUnits.elementAt(i).moveToY = DrawImages.buildings.elementAt(0).getY();
 					DrawImages.enemyUnits.elementAt(i).moving = true;

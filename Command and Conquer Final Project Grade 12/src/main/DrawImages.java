@@ -151,6 +151,7 @@ public class DrawImages extends JPanel {
 			g.drawImage(DrawImages.units.elementAt(i).getImage(), DrawImages.units.elementAt(i).getX(),
 					DrawImages.units.elementAt(i).getY(), DrawImages.units.elementAt(i).getWidth(),
 					DrawImages.units.elementAt(i).getHeight(), this);
+			DrawImages.units.elementAt(i).moveBullets();
 			// Draws all of the bullets for the unit
 			for (int j = 0; j < DrawImages.units.elementAt(i).bullets.size(); j++) {
 				ImageIcon bullet = new ImageIcon(this.getClass()

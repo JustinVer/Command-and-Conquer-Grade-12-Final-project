@@ -62,7 +62,7 @@ public class Units {
 	public int maxHolding = 2000;
 	public boolean movingToRefinery = true;
 	public int IndexOfRefinery = 0;
-
+	public boolean attackEnemy = false;
 //Creates a new unit with the proper X, Y, width, and height, etc
 	/**
 	 * Sets all of the required variables depending on what unit is created
@@ -1515,6 +1515,7 @@ public class Units {
 		}
 		if (distance.size() > 0) {
 			this.moving = false;
+			this.attackEnemy=true;
 		} else if (this.x != this.moveToX || this.y != this.moveToY) {
 			this.moving = true;
 		}
@@ -1537,6 +1538,10 @@ public class Units {
 								/ this.bullets.elementAt(i).moveIntervals);
 				this.bullets.elementAt(i).moveIntervals -= 1;
 				this.bullets.elementAt(i).findDirection();
+				if(this.bullets.elementAt(i).moveIntervals == 0) {
+					this.bullets.elementAt(i).x = this.bullets.elementAt(i).targetX;
+					this.bullets.elementAt(i).y = this.bullets.elementAt(i).targetY;
+				}
 			} catch (ArithmeticException e) {
 				this.HP -= this.bullets.elementAt(i).damage;
 				this.bullets.remove(i);
