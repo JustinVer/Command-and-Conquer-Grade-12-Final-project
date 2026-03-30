@@ -1,5 +1,3 @@
-package main;
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -19,15 +17,15 @@ public class DrawImages extends JPanel {
 
 	// Declare variables
 	private static final long serialVersionUID = 1L;
-	private ImageIcon Ore1 = new ImageIcon(this.getClass().getResource("Ore1.png"));
-	private ImageIcon tiberium1 = new ImageIcon(this.getClass().getResource("Tiberium.png"));
+	private ImageIcon Ore1 = new ImageIcon(this.getClass().getResource("Images/Ore1.png"));
+	private ImageIcon tiberium1 = new ImageIcon(this.getClass().getResource("Images/Tiberium.png"));
 
-	private ImageIcon PowerPlant1T = new ImageIcon(this.getClass().getResource("powerPlantGreenTransparent.png"));
-	private ImageIcon BarracksGT = new ImageIcon(this.getClass().getResource("BarracksTransparent.png"));
-	private ImageIcon FactoryGT = new ImageIcon(this.getClass().getResource("FactoryTransparent.png"));
-	private ImageIcon RefineryGT = new ImageIcon(this.getClass().getResource("RefineryTransparent.png"));
-	private ImageIcon backround = new ImageIcon(this.getClass().getResource("backgorund_3.png"));
-	private ImageIcon TurretTR = new ImageIcon(this.getClass().getResource("TurretTransparent.png"));
+	private ImageIcon PowerPlant1T = new ImageIcon(this.getClass().getResource("Images/powerPlantGreenTransparent.png"));
+	private ImageIcon BarracksGT = new ImageIcon(this.getClass().getResource("Images/BarracksTransparent.png"));
+	private ImageIcon FactoryGT = new ImageIcon(this.getClass().getResource("Images/FactoryTransparent.png"));
+	private ImageIcon RefineryGT = new ImageIcon(this.getClass().getResource("Images/RefineryTransparent.png"));
+	private ImageIcon backround = new ImageIcon(this.getClass().getResource("Images/backgorund_3.png"));
+	private ImageIcon TurretTR = new ImageIcon(this.getClass().getResource("Images/TurretTransparent.png"));
 
 	private Image PowerPlantGreenT = PowerPlant1T.getImage();
 	private Image BarracksGreenT = BarracksGT.getImage();
@@ -103,7 +101,7 @@ public class DrawImages extends JPanel {
 			// Draws all of the bullets for the unit
 			for (int j = 0; j < DrawImages.buildings.elementAt(i).bullets.size(); j++) {
 				ImageIcon bullet = new ImageIcon(this.getClass()
-						.getResource("Bullet" + DrawImages.buildings.elementAt(i).bullets.elementAt(j).directionY
+						.getResource("Images/Bullet" + DrawImages.buildings.elementAt(i).bullets.elementAt(j).directionY
 								+ DrawImages.buildings.elementAt(i).bullets.elementAt(j).directionX + ".png"));
 				Image bulletImage = bullet.getImage();
 				g.drawImage(bulletImage, DrawImages.buildings.elementAt(i).bullets.elementAt(j).x,
@@ -127,7 +125,7 @@ public class DrawImages extends JPanel {
 			// Draws all of the bullets for the unit
 			for (int j = 0; j < DrawImages.enemyBuildings.elementAt(i).bullets.size(); j++) {
 				ImageIcon bullet = new ImageIcon(this.getClass()
-						.getResource("Bullet" + DrawImages.enemyBuildings.elementAt(i).bullets.elementAt(j).directionY
+						.getResource("Images/Bullet" + DrawImages.enemyBuildings.elementAt(i).bullets.elementAt(j).directionY
 								+ DrawImages.enemyBuildings.elementAt(i).bullets.elementAt(j).directionX + ".png"));
 				Image bulletImage = bullet.getImage();
 				g.drawImage(bulletImage, DrawImages.enemyBuildings.elementAt(i).bullets.elementAt(j).x,
@@ -141,7 +139,7 @@ public class DrawImages extends JPanel {
 					Play.gameEnded = true;
 				}
 				DrawImages.enemyBuildings.remove(i);
-				if (DrawImages.enemyBuildings.elementAt(i).name.equals("TurretRed")) {
+				if (DrawImages.enemyBuildings.elementAt(i).name.equals("Images/TurretRed")) {
 					Play.Turret--;
 				}
 			}
@@ -155,7 +153,7 @@ public class DrawImages extends JPanel {
 			// Draws all of the bullets for the unit
 			for (int j = 0; j < DrawImages.units.elementAt(i).bullets.size(); j++) {
 				ImageIcon bullet = new ImageIcon(this.getClass()
-						.getResource("Bullet" + DrawImages.units.elementAt(i).bullets.elementAt(j).directionY
+						.getResource("Images/Bullet" + DrawImages.units.elementAt(i).bullets.elementAt(j).directionY
 								+ DrawImages.units.elementAt(i).bullets.elementAt(j).directionX + ".png"));
 				Image bulletImage = bullet.getImage();
 				g.drawImage(bulletImage, DrawImages.units.elementAt(i).bullets.elementAt(j).x,
@@ -187,7 +185,7 @@ public class DrawImages extends JPanel {
 			// Draws bullets
 			for (int j = 0; j < DrawImages.enemyUnits.elementAt(i).bullets.size(); j++) {
 				ImageIcon bullet = new ImageIcon(this.getClass()
-						.getResource("Bullet" + DrawImages.enemyUnits.elementAt(i).bullets.elementAt(j).directionY
+						.getResource("Images/Bullet" + DrawImages.enemyUnits.elementAt(i).bullets.elementAt(j).directionY
 								+ DrawImages.enemyUnits.elementAt(i).bullets.elementAt(j).directionX + ".png"));
 				Image bulletImage = bullet.getImage();
 				g.drawImage(bulletImage, DrawImages.enemyUnits.elementAt(i).bullets.elementAt(j).x,
@@ -457,7 +455,7 @@ public class DrawImages extends JPanel {
 			g.drawImage(TurretT, Play.mouseX - 50, Play.mouseY - 50, 100, 100, this);
 			if (Play.click == 0 && Buildings.newBuildingCollision(DrawImages.buildings) == false) {
 				if (Play.resourceCount >= turretCost) {
-					buildings.add(new Buildings(Play.mouseX - 50, Play.mouseY - 50, "Turret"));
+					buildings.add(new Buildings(Play.mouseX - 50, Play.mouseY - 50, "Images/Turret"));
 					Play.resourceCount -= turretCost;
 				}
 				Button.clicked = " ";

@@ -1,5 +1,3 @@
-package main;
-
 public class ResourcesPlacement {
 	/**
 	 * Description: Colision detection of the resources and the building

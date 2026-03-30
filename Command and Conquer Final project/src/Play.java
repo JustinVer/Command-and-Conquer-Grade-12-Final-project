@@ -1,5 +1,3 @@
-package main;
-
 import java.awt.Dimension;
 import java.awt.MouseInfo;
 import java.awt.Toolkit;

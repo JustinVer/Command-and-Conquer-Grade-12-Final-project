@@ -1,5 +1,3 @@
-package main;
-
 /**
  * Class for all of the bullets
  * 

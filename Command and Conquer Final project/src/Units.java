@@ -1,5 +1,3 @@
-package main;
-
 import java.awt.Image;
 import java.util.Vector;
 
@@ -175,7 +173,7 @@ public class Units {
 	public Image getImage() {
 		Image Image = null;
 		String name = this.name + this.directionY + this.directionX + ".png";
-		ImageIcon temp = new ImageIcon(this.getClass().getResource(name));
+		ImageIcon temp = new ImageIcon(this.getClass().getResource("Images/" + name));
 		Image = temp.getImage();
 		return Image;
 	}

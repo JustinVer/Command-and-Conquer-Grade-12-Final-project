@@ -1,5 +1,3 @@
-package main;
-
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -20,7 +18,7 @@ import javax.swing.JPanel;
 public class StartMenu extends JPanel {
 	private static final long serialVersionUID = 5652386887047783656L;
 	public static JFrame frame = new JFrame();
-	private ImageIcon startPic = new ImageIcon(this.getClass().getResource("StartMenuPic.png"));
+	private ImageIcon startPic = new ImageIcon(this.getClass().getResource("Images/StartMenuPic.png"));
 	private Image StartMenuPic = startPic.getImage();
 
 	/**
